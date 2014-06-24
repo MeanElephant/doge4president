@@ -34,9 +34,27 @@ Quisque rutrum odio metus, hendrerit fringilla nisl lobortis vitae. Class aptent
 </div>
 </div>
 </div>
-<footer>Donate to DHuc9AawAAKR8TfgBTk8ppJQDwYtJiqiYv for assistance with doge4president!</footer>
+<br>
+<hr>
+<footer style="color:white; font-style:bold; text-align:center;">Made by Owen Walters, Some rights reserved. Donate to <span style="font-style:italic">DHuc9AawAAKR8TfgBTk8ppJQDwYtJiqiYv</span> for assistance with doge4president!</footer>
 </body>
 <script>
+var votes="Sorry... broken";
+function loadThis(localuri) {
+    var oRequest = new XMLHttpRequest();
+
+    var sURL = 'http://'
+        + localuri;
+
+    oRequest.open('GET',sURL,false);
+    oRequest.send(null);
+
+    if (oRequest.status==200) return(oRequest.responseText);
+    else alert('Error executing XMLHttpRequest call!');
+}
+localuri    = "dogechain.info/chain/Dogecoin/q/getreceivedbyaddress/DHuc9AawAAKR8TfgBTk8ppJQDwYtJiqiYv";
+var coins = loadThis(localuri);
+votes = Math.floor(coins / 100);
 $( "#home" ).click(function() {
   $( "#text" ).replaceWith( "<div id='text'>" + "Quisque rutrum odio metus, hendrerit fringilla nisl lobortis vitae. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vestibulum nisi nibh, tristique at tincidunt ac, congue eget leo. In nunc nibh, malesuada vitae fringilla eu, placerat non urna. Sed vitae aliquam libero. Proin ac adipiscing nisl, eget porttitor nulla. Donec sapien ligula, tincidunt vel arcu id, eleifend imperdiet velit. Ut erat leo, consectetur ut consectetur consequat, facilisis et dolor. Proin mollis eget metus vitae consectetur. Integer egestas molestie euismod. Donec varius sit amet lacus sed sagittis. Etiam eu elit ultrices, semper turpis in, rutrum mi. Phasellus sit amet nisi congue, ultricies quam et, varius orci. Duis tincidunt nisl quis turpis pharetra malesuada." + "</div>" );
 $( "#picture" ).css("background-image", "url(http://cdn.superbwallpapers.com/wallpapers/meme/doge-27437-1920x1080.jpg)");
@@ -46,7 +64,7 @@ $( "#about" ).click(function() {
 $( "#picture" ).css("background-image", "url(http://www.fanaru.com/doge/image/14009-doge-its-full-of-doge.jpg)");
 });
 $( "#vote" ).click(function() {
-  $( "#text" ).replaceWith( "<div id='text'>" + "Inani ocurreret id quo, sea id aliquid indoctum. Ei vix habeo voluptatum, per cibo ponderum convenire et. Sint case consul sit ut, an ius maiorum iudicabit. Mel eu solet vivendo, eu fabulas expetendis eos. Cu per ignota intellegat, eos justo signiferumque ad. Nam in evertitur consetetur. Mel quaeque labores reprehendunt ex, no eam exerci epicuri delicatissimi, ea epicurei intellegat reprehendunt ius. Sed ea docendi accommodare, an sed vitae intellegebat. Eu rebum oratio percipitur ius, has te etiam eloquentiam. Sed ut errem feugait detraxit, vis cu natum legendos. Et quando putent atomorum eam, te agam meis habeo pro. Purto perfecto eu vix, sea ea hinc eruditi. Ea qui zril dictas oblique. Prima phaedrum sapientem id sit. Lucilius facilisis ei mea, omnesque reprehendunt eam ad. No cum lorem salutandi, has utinam libris id. Et vel mucius putent molestie. Eos mollis animal ne, eam mazim officiis pericula ad. Quis percipitur dissentiet ut vis, clita veniam integre nam ei, sit no audiam feugait indoctum. Vim no affert lucilius. Est ex autem illud putant. Vix ea elit apeirian patrioque. Summo aperiri senserit id has, in dolore graeco delenit usu. Quo sint ullamcorper cu. Integre fuisset ullamcorper ei quo. Eos cu modo vulputate. Ius civibus inciderint eu, mutat soleat primis ex nam. At utamur voluptatum duo. Id eros commune cum, ea quas inermis adolescens est. An unum elitr pri, ius fastidii partiendo et. Meis convenire ius ea, ei eam constituam disputando. Dico atqui mollis his at. Usu esse meis mediocrem cu, eum in diam homero omnesque, at altera singulis nam. Vix labores suscipiantur te, vel tale suavitate constituto eu, in duo causae consulatu. Est tollit laoreet comprehensam ut, nec quidam copiosae ut. Ad eos debet fierent, sea ad assueverit disputationi. Ei sit partem omittam offendit. Vim te veniam tempor, duo ex ipsum aeque. Quo odio nulla inimicus ex, nullam altera consequat eum no, dolore admodum fierent vim eu. Vis id dolorum vocibus principes, pri dolore consul signiferumque ad. Ex munere prodesset sed, cu assum argumentum mea, fastidii philosophia id vis. Et sit veniam option persequeris. Ex mel recusabo delicata, an doctus periculis est. Verterem hendrerit qui ut. Ex vim oratio delicata, eum an apeirian explicari. Eius noluisse epicurei eu sed, mollis fabellas tacimates at qui. Te nam electram reformidans referrentur. Dicat clita adipisci ex has, ex sit primis nonumes. Legere admodum delicata ut mei, facer commodo aeterno mei in, nam dicat partem temporibus no." + "</div>" );
+  $( "#text" ).replaceWith( "<div id='text'>" + "In order to vote please donate to <span style='font-style:italic'>DHuc9AawAAKR8TfgBTk8ppJQDwYtJiqiYv</span> 100 dogecoins = 1 vote. Number of votes:" + votes + "</div>" );
 $( "#picture" ).css("background-image", "url(http://www.fanaru.com/witch-craft-works/image/26622-doge-saturn-doge.jpg)");
 });
 </script>
