@@ -14,6 +14,7 @@ background-image: -webkit-linear-gradient(bottom, rgb(255, 51, 51) 0%, rgb(148, 
 background-image: -ms-linear-gradient(bottom, rgb(255, 51, 51) 0%, rgb(148, 0, 0) 100%);
 background-image: linear-gradient(to bottom, rgb(255, 51, 51) 0%, rgb(148, 0, 0) 100%);} #menu {display:block; background-color:#09F; transition:0.5s;} #menu td a {color:#FFF; text-decoration:none; transition:0.5s;} #menu:hover { background-color:#FFF;} #menu td a:hover {color:#09F;} #picture {background-image:url(http://cdn.superbwallpapers.com/wallpapers/meme/doge-27437-1920x1080.jpg); background-size: cover; background-position: center center; padding-left:0%; padding-right:0%; padding-bottom:30%} #text{color:white; font-size:16pt;} #header {background-image:url(http://i.imgur.com/pWHNqPq.jpg); background-size:cover; padding-bottom:25%; background-repeat:no-repeat;};</style>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="http://cdn.bitmindo.com/dogecoin.min.js"></script>
 </head>
 <body>
 <div id="container" width="100%" height="100%">
@@ -36,7 +37,20 @@ Quisque rutrum odio metus, hendrerit fringilla nisl lobortis vitae. Class aptent
 </div>
 <br>
 <hr>
-<footer style="color:white; font-style:bold; text-align:center;">Made by Owen Walters, Some rights reserved. Donate to <span style="font-style:italic">DHuc9AawAAKR8TfgBTk8ppJQDwYtJiqiYv</span> for assistance with doge4president!</footer>
+<footer style="color:white; font-style:bold; text-align:center;">Made by Owen Walters, Some rights reserved. Donate to <span style="font-style:italic">DHuc9AawAAKR8TfgBTk8ppJQDwYtJiqiYv</span> for assistance with doge4president! <script>
+  CoinWidgetCom.go({
+    /* make sure you update the wallet_address or you will not get your donations */
+    wallet_address: "DHuc9AawAAKR8TfgBTk8ppJQDwYtJiqiYv"
+    , currency: "dogecoin"
+    , counter: "amount"
+    , alignment: "bl"
+    , qrcode: true
+    , auto_show: false
+    , lbl_button: "Donate"
+    , lbl_address: "Tip Dogecoin to this Address:"
+    , lbl_amount: "DOGE"
+  });
+</script></footer>
 </body>
 <script>
 var votes="Sorry... broken";
@@ -64,7 +78,7 @@ $( "#about" ).click(function() {
 $( "#picture" ).css("background-image", "url(http://www.fanaru.com/doge/image/14009-doge-its-full-of-doge.jpg)");
 });
 $( "#vote" ).click(function() {
-  $( "#text" ).replaceWith( "<div id='text'>" + "In order to vote please donate to <span style='font-style:italic'>DHuc9AawAAKR8TfgBTk8ppJQDwYtJiqiYv</span> 100 dogecoins = 1 vote. Number of votes: " + votes + " Need some dogecoins? Visit the <a href='http://www.reddit.com/r/dogecoin/'>subreddit</a> and tell them Doge sent you.</div>" );
+  $( "#text" ).replaceWith( "<div id='text'>" + "In order to vote please donate to <span style='font-style:italic'>DHuc9AawAAKR8TfgBTk8ppJQDwYtJiqiYv</span> <a href=''><img src='http://www.fallenplanetstudios.com/wordpress/wp-content/uploads/2014/02/doge-donation.png' /></a> 100 dogecoins = 1 vote. Number of votes: " + votes + " Need some dogecoins? Visit the <a href='http://www.reddit.com/r/dogecoin/'>subreddit</a> and tell them Doge sent you.</div>" );
 $( "#picture" ).css("background-image", "url(http://www.fanaru.com/witch-craft-works/image/26622-doge-saturn-doge.jpg)");
 });
 </script>
